@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Login_App">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/et_inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:hint="input email"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:hint="input password"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_inputEmail" />
+
+        <Button
+            android:id="@+id/btn_Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_14sp"
+            app:layout_constraintRight_toRightOf="@+id/et_inputPassword"
+            app:layout_constraintTop_toBottomOf="@+id/et_inputPassword" />
+
+        <Button
+            android:id="@+id/btn_changeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_14sp"
+            app:layout_constraintRight_toLeftOf="@+id/btn_Login"
+            app:layout_constraintTop_toBottomOf="@+id/et_inputPassword" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_user_re"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:hint="input user" />
+
+        <EditText
+            android:id="@+id/et_password_re"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:hint="input password" />
+
+        <EditText
+            android:id="@+id/et_email_re"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:hint="input email" />
+
+        <EditText
+            android:id="@+id/et_address_re"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:hint="input address" />
+
+        <EditText
+            android:id="@+id/et_gender_re"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:hint="input gender" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_weight="1"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_14sp" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:layout_weight="1"
+                android:text="Not Now"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
